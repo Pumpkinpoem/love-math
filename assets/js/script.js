@@ -45,16 +45,16 @@ function runGame(gameType) {
 function checkAnswer() {
 
     let userAnswer = parseInt(document.getElementById("answer-box").value);
-    let calculateCorrectAnswer = calculateCorrectAnswer();
-    let isCorrect = userAnswer === calculateCorrectAnswer[0];
+    let calculatedAnswer = calculateCorrectAnswer();
+    let isCorrect = userAnswer === calculatedAnswer[0];
 
     if (isCorrect) {
         alert("Jippi! You got it!");
     } else {
-        alert(`Whomp Whomp... You answered ${userAnswer}. The correct answer is ${calculateCorrectAnswer[0]}!`);
+        alert(`Whomp Whomp... You answered ${userAnswer}. The correct answer is ${calculatedAnswer[0]}!`);
     }
 
-    runGame(calculateCorrectAnswer[1]);
+    runGame(calculatedAnswer[1]);
 
 }
 
